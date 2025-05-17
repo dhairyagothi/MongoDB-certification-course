@@ -1,1 +1,67 @@
+CREATE DATABASE IF NOT EXISTS vit;
+USE vit;
 
+CREATE TABLE cse (
+    name VARCHAR(50),
+    reg_no VARCHAR(15) PRIMARY KEY,
+    marks INT,
+    graduation_year YEAR
+);
+
+INSERT INTO cse VALUES
+('Aarav Mehta', 'CSE1001', 89, 2025),
+('Isha Kapoor', 'CSE1002', 91, 2025),
+('Rohan Das', 'CSE1003', 76, 2025),
+('Sana Sheikh', 'CSE1004', 88, 2026),
+('Neha Verma', 'CSE1005', 95, 2025),
+('Kunal Roy', 'CSE1006', 81, 2026),
+('Tanya Singh', 'CSE1007', 92, 2025),
+('Dev Sharma', 'CSE1008', 85, 2026),
+('Anjali Jain', 'CSE1009', 90, 2025),
+('Mohit Nair', 'CSE1010', 78, 2026);
+
+CREATE TABLE aerospace (
+    name VARCHAR(50),
+    reg_no VARCHAR(15) PRIMARY KEY,
+    marks INT,
+    graduation_year YEAR
+);
+
+INSERT INTO aerospace VALUES
+('Ritika Menon', 'AE1001', 82, 2025),
+('Harsh Patel', 'AE1002', 75, 2025),
+('Sneha Rao', 'AE1003', 88, 2026),
+('Aditya Iyer', 'AE1004', 90, 2025),
+('Megha Rathi', 'AE1005', 85, 2025),
+('Yash Joshi', 'AE1006', 79, 2026),
+('Prachi Bansal', 'AE1007', 92, 2026),
+('Raghav Kulkarni', 'AE1008', 84, 2025),
+('Nidhi Sethi', 'AE1009', 87, 2025),
+('Siddharth Rao', 'AE1010', 73, 2026);
+
+CREATE TABLE mechanical (
+    name VARCHAR(50),
+    reg_no VARCHAR(15) PRIMARY KEY,
+    marks INT,
+    graduation_year YEAR
+);
+
+INSERT INTO mechanical VALUES
+('Amit Rane', 'ME1001', 80, 2025),
+('Riya Borkar', 'ME1002', 86, 2025),
+('Tarun Kaul', 'ME1003', 74, 2026),
+('Divya Salunke', 'ME1004', 89, 2025),
+('Nikhil Sharma', 'ME1005', 91, 2026),
+('Snehal Pawar', 'ME1006', 83, 2025),
+('Kartik Jadhav', 'ME1007', 77, 2026),
+('Shweta Naik', 'ME1008', 88, 2025),
+('Omkar Desai', 'ME1009', 90, 2026),
+('Pooja Shetty', 'ME1010', 84, 2025);
+
+ALTER TABLE cse ADD email VARCHAR(100);
+
+ALTER TABLE aerospace MODIFY marks DECIMAL(5,2);
+
+ALTER TABLE mechanical CHANGE graduation_year grad_year YEAR;
+
+ALTER TABLE cse DROP COLUMN email;
